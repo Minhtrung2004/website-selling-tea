@@ -1,0 +1,48 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #1a162e;
+    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(28%) saturate(1169%) hue-rotate(210deg) brightness(95%)
+        contrast(98%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--body-bg-color);
+    font-size: 1.6rem;
+    font-family: "Gordita";
+    color: var(--text-color);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button,
+input,
+template,
+select,
+img {
+    font-family: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// color icon
+.icon {
+    filter: var(--icon-color);
+}
