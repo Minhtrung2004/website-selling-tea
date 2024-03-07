@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +35,24 @@
             load("#header", "./templates/header.html");
         </script>
         <div class="container">
-            <!-- header -->
+            <!-- slideshow -->
+            <div class="slideshow">
+                <div class="slideshow__inner">
+                    <div class="slideshow__item">
+                        <a class="slideshow__link">
+                            <picture>
+                                <source media="(max-width: 767.8px)" srcset="./assets/image/slideshow/item-1.png" />
+                                <img src="./assets/image/slideshow/item-1.png" alt="" class="slideshow__img" />
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="slideshow__page">
+                    <span class="slideshow__num">1</span>
+                    <span class="slideshow__slider"></span>
+                    <span class="slideshow__num">5</span>
+                </div>
+            </div>
             <footer id="footer"></footer>
             <script>
                 load("#header", "./templates/footer.html");

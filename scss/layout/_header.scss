@@ -11,6 +11,7 @@
 }
 
 .top-bar {
+    z-index: 1;
     @extend %flexItemsCenter;
     position: relative;
     @include abstracts.breakpoint(lg) {
@@ -28,6 +29,7 @@
         padding: 20px 0;
         background: var(--dropdown-bg-color);
         translate: -100%;
+        border-radius: 0 20px 20px 0;
 
         transition: translate 0.5s;
         &.show {
@@ -77,8 +79,16 @@
             flex-direction: column;
             align-items: flex-start;
             overflow-y: auto;
-            background-color: #fff;
-            height: calc(100% - 26px);
+            height: calc(100% - 40px);
+            overscroll-behavior: contain;
+        }
+
+        @include abstracts.breakpoint(md) {
+            height: calc(100% - 140px);
+        }
+
+        @include abstracts.breakpoint(sm) {
+            height: calc(100% - 124px);
         }
     }
 
