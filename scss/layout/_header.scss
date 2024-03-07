@@ -16,16 +16,6 @@
     @include abstracts.breakpoint(lg) {
         justify-content: space-between;
     }
-    &__more {
-        display: none;
-        filter: var(--icon-color);
-        @include abstracts.breakpoint(lg) {
-            display: block;
-        }
-    }
-    @include abstracts.breakpoint(md) {
-        justify-content: space-between;
-    }
 }
 
 .navbar {
@@ -48,6 +38,10 @@
             visibility: visible;
             opacity: 1;
         }
+
+        @include abstracts.breakpoint(lg) {
+            inset: 0 20% 0 0;
+        }
     }
 
     &__close-btn {
@@ -55,6 +49,11 @@
         @include abstracts.breakpoint(lg) {
             display: block;
             padding: 10px 40px;
+        }
+
+        @include abstracts.breakpoint(md) {
+            display: block;
+            padding: 10px 20px;
         }
     }
 
@@ -77,6 +76,9 @@
         @include abstracts.breakpoint(lg) {
             flex-direction: column;
             align-items: flex-start;
+            overflow-y: auto;
+            background-color: #fff;
+            height: calc(100% - 26px);
         }
     }
 
@@ -86,11 +88,13 @@
         }
 
         @include abstracts.breakpoint(lg) {
+            width: 100%;
             &:hover .dropdown {
                 display: none;
             }
-
-            width: 100%;
+        }
+        &--active .dropdown {
+            display: block !important;
         }
     }
 
@@ -109,20 +113,31 @@
             font-size: 1.6rem;
             line-height: 150%; /* 150% */
         }
+
+        @include abstracts.breakpoint(md) {
+            padding: 0 20px;
+        }
     }
 
     &__arrow {
         margin-top: 3px;
+        @include abstracts.breakpoint(lg) {
+            rotate: -90deg;
+            transition: rotate 0.3s;
+        }
+    }
+
+    &__item--active &__arrow {
+        rotate: 0deg;
     }
 }
 
-// nav-btn
 .nav-btn {
     display: none;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.breakpoint(md) {
         display: flex;
         align-items: center;
-        padding: 10px 40px;
+        padding: 10px 20px;
     }
 
     &__title {
@@ -162,15 +177,6 @@
         border-radius: 8px;
         background: var(--top-act-bg-group-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-        @include abstracts.breakpoint(xl) {
-            display: none;
-        }
-    }
-
-    &__group--single {
-        @include abstracts.breakpoint(lg) {
-            display: none;
-        }
         @include abstracts.breakpoint(xl) {
             display: none;
         }
