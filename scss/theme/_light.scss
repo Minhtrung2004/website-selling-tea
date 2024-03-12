@@ -2,13 +2,13 @@
 
 html {
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(28%)
-        saturate(1169%) hue-rotate(210deg) brightness(95%) contrast(98%);
+    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(28%) saturate(1169%) hue-rotate(210deg) brightness(95%)
+        contrast(98%);
     --header-bg-color: #eee;
     --body-bg-color: #f6f6f6;
     --top-act-bg-group-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-bg-color: #fff;
     }
     // dropdown
@@ -17,4 +17,19 @@ html {
     --top-menu-boder-color: #d2d1d6;
     --menu-culumn-heading-color: #1a162e;
     --menu-culumn-link-text-color: #1a162e;
+
+    // category-item
+    --category-item-bg-color: #eee;
+    --category-item-thumb-bg-color: #fff;
+
+    // filter
+    --filter-btn-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+    // like-btn
+    --like-btn-bg-color: #fff;
+    --like-btn-shadow-color: rgba(124, 124, 124, 0.2);
+
+    // product
+    --product-card-bg-color: #fff;
+    --product-card-shadow-color: rgba(237, 237, 246, 0.2);
 }

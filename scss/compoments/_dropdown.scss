@@ -7,7 +7,7 @@
     width: min(1240px, 100%);
     padding-top: 54px;
     display: none;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         padding-top: 0;
     }
@@ -23,14 +23,14 @@
         background: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             border-radius: 0;
             background: transparent;
             box-shadow: none;
             padding: 0 40px;
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             padding: 0 20px;
         }
 
@@ -41,7 +41,7 @@
             left: var(--arrow-left-pos);
             translate: -50%;
             filter: var(--dropdown-arrow-color);
-            @include abstracts.breakpoint(lg) {
+            @include abstracts.screen(lg) {
                 content: none;
             }
         }
@@ -59,7 +59,7 @@
         height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 100%;
             height: auto;
             border-right: none;
@@ -70,7 +70,7 @@
 .menu-column {
     display: flex;
     gap: 14px;
-    @include abstracts.breakpoint(xl) {
+    @include abstracts.screen(xl) {
         margin-top: 5px;
     }
 
@@ -83,11 +83,11 @@
         flex-shrink: 0;
         width: 36px;
         height: 36px;
-        @include abstracts.breakpoint(xl) {
+        @include abstracts.screen(xl) {
             display: none;
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: block;
         }
     }
@@ -118,14 +118,14 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-bottom: 20px;
         }
     }
 
     &__list {
         margin-top: 19px;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
         }
     }
@@ -151,7 +151,7 @@
 }
 
 .menu-column__icon--first {
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         display: none;
     }
 }
@@ -168,7 +168,7 @@
 
     overflow-y: auto;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         grid-template-columns: 1fr;
         padding-left: 0;
@@ -182,7 +182,7 @@
         height: var(--max-inner-height);
         padding-left: 0;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             height: auto;
             grid-template-columns: 1fr;
         }
